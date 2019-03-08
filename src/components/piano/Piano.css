@@ -1,0 +1,55 @@
+body {
+  background-color: orange;
+}
+
+.piano {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+.key {
+  border-radius: .5vmin;
+}
+
+.key-white {
+  width: 12vmin;
+  height: 24vmin;
+  background-color: white;
+  box-shadow: rgba(0, 0, 0, 0.1) 0.6vmin 0.6vmin 0.6vmin -0.3vmin, inset rgba(0, 0, 0, 0.2) -0.6vmin -0.6vmin 2.4vmin -0.6vmin;
+}
+
+.key-white > span.note {
+  padding-top: 26px;
+  position: relative;
+  top: 19vmin;
+  width: 12vmin;
+  left: 2vmin;
+}
+
+.key-black > span.note {
+  padding-top: 26px;
+  position: relative;
+  color: white;
+  width: 12vmin;
+  font-size: 10px;
+}
+
+.key-white-clicked {
+  background-color: #cccccc;
+}
+
+.key-black {
+  margin: -1.5vmin -3vmin;
+  width: 6vmin;
+  height: 18vmin;
+  z-index: 2;
+  background-color: black;
+  margin-bottom: 4vh;
+  box-shadow: rgba(0, 0, 0, 0.1) 0.6vmin 0.6vmin 0.6vmin -0.3vmin, inset rgba(255, 255, 255, 0.1) 0.6vmin 0.6vmin 2.4vmin 1.2vmin;
+}
+
+.key-black-clicked {
+  background-color: #333;
+}
