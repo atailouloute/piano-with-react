@@ -2,6 +2,7 @@ import React, { Component, Fragment } from 'react'
 import './Piano.css'
 import Tone from 'tone'
 import Scale from './Scale'
+import { Button } from 'antd'
 
 export class Piano extends Component {
   scaleRefs = {}
@@ -36,7 +37,7 @@ export class Piano extends Component {
           this.notes[0].split(';').forEach(note => {
             // console.log(note)
             const number = parseInt(note[note.length - 1])
-            this.scaleRefs[number].current.play(note.substring(0, note.length - 1))
+            this.scaleRefs[number + 1].current.play(note.substring(0, note.length - 1))
           })
         }
         this.notes.shift()
@@ -56,7 +57,7 @@ export class Piano extends Component {
     return (
       <Fragment>
         <textarea onChange={this.handleChange} cols='20' rows='2' value={this.state.note} />
-        <button onClick={this.handleClick}>Click</button>
+        <Button type='primary' onClick={this.handleClick}>Click</Button>
         <div className='piano'>
           {
             [...Array(5)].map((el, index) => (
